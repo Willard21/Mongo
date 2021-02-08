@@ -1,0 +1,5 @@
+# Start up the database with the volume mounted to ~/data and the name "db"
+sudo docker run -d --name db -v ~/data:/data/db -p 27017:27017 mongo:latest
+
+# Hook into the docker terminal for the "db" container
+sudo docker exec -it mongodb bash
